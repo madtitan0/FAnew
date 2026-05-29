@@ -7,7 +7,7 @@
   <meta name="description" content="Explore FA's 26 finance programs across 9 learning modes — CA Foundation, Professional Development, Custom Coaching and more in Hosur." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,200..700;1,9..144,200..700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous"></noscript>
   <link rel="stylesheet" href="css/style.css" />
@@ -16,6 +16,7 @@
 
 <div id="loader">
   <div class="loader-text">FA</div>
+  <div class="loader-sub">Finance Academy — Hosur</div>
   <div class="loader-line"></div>
 </div>
 
@@ -26,10 +27,17 @@
   </a>
   <div class="nav-links">
     <a href="index.html" class="nav-link">Home</a>
-    <a href="about.html" class="nav-link">About</a>
-    <a href="programs.html" class="nav-link active">Programs</a>
-    <a href="store.html" class="nav-link">Store</a>
-    <a href="lounge.html" class="nav-link">Lounge</a>
+    <div class="nav-dropdown">
+      <span class="nav-dropdown-trigger" tabindex="0" role="button" aria-haspopup="true">FA <i class="fas fa-chevron-down" style="font-size:9px;opacity:.7;"></i></span>
+      <div class="nav-dropdown-menu" role="menu">
+        <a href="fa-schools.html" class="nav-dropdown-link" role="menuitem">FA @ Schools</a>
+        <a href="fa-colleges.html" class="nav-dropdown-link" role="menuitem">FA @ Colleges</a>
+        <a href="fa-office.html" class="nav-dropdown-link" role="menuitem">FA @ Office</a>
+      </div>
+    </div>
+    <a href="programs.html" class="nav-link active">Courses / Programs</a>
+    <a href="why-fa.html" class="nav-link">Why FA?</a>
+    <a href="contact.html" class="nav-link">Contact Us</a>
   </div>
   <div class="nav-cta">
     <a href="contact.html" class="btn-nav">Enroll Now</a>
@@ -41,11 +49,23 @@
 
 <div id="nav-overlay">
   <a href="index.html" class="nav-overlay-link">Home</a>
-  <a href="about.html" class="nav-overlay-link">About</a>
-  <a href="programs.html" class="nav-overlay-link">Programs</a>
-  <a href="store.html" class="nav-overlay-link">Store</a>
-  <a href="lounge.html" class="nav-overlay-link">Lounge</a>
-  <a href="contact.html" class="nav-overlay-link">Contact</a>
+  <a href="fa-schools.html" class="nav-overlay-link">FA @ Schools</a>
+  <a href="fa-colleges.html" class="nav-overlay-link">FA @ Colleges</a>
+  <a href="fa-office.html" class="nav-overlay-link">FA @ Office</a>
+  <a href="programs.html" class="nav-overlay-link">Courses / Programs</a>
+  <a href="why-fa.html" class="nav-overlay-link">Why FA?</a>
+  <a href="contact.html" class="nav-overlay-link">Contact Us</a>
+</div>
+
+<!-- ── Exam Countdown Strip ── -->
+<div class="countdown-strip">
+  <div class="container">
+    <div class="countdown-inner">
+      <span class="countdown-label"><i class="fas fa-clock" style="margin-right:8px;color:var(--gold);"></i>CA Foundation Exam Countdown</span>
+      <span class="countdown-num"><strong id="exam-days" data-date="2026-11-15">—</strong> days to go</span>
+      <a href="contact.html" class="countdown-cta">Enroll Now <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
 </div>
 
 <!-- Page Hero -->
@@ -156,11 +176,12 @@
     </div>
 
     <div class="courses-wrap">
+      <!-- ── CA Foundation ─────────────────────────────── -->
       <div class="course-card featured reveal" data-cat="ca">
         <div class="course-num">01</div>
         <div class="course-cat">CA Foundation</div>
         <h3 class="course-name">Paper 1 — Principles of Accounting</h3>
-        <p class="course-desc">Build a rock-solid accounting foundation. FA's comprehensive course covers all aspects of Paper 1 with exclusive study material and a 10,000+ question bank. Produced multiple AIR holders.</p>
+        <p class="course-desc">Build a rock-solid accounting foundation. FA's comprehensive course covers all aspects of Paper 1 with exclusive study material and a 10,000+ question bank that has produced multiple AIR holders.</p>
         <div class="course-footer">
           <span class="course-meta"><i class="fas fa-clock" style="color:var(--gold);margin-right:5px;"></i>6 Months &nbsp;·&nbsp; 9 Modes</span>
           <a href="contact.html" class="btn-text">Enroll <i class="fas fa-arrow-right"></i></a>
@@ -171,7 +192,7 @@
         <div class="course-num">02</div>
         <div class="course-cat">CA Foundation</div>
         <h3 class="course-name">Paper 2 — Business Laws</h3>
-        <p class="course-desc">Corporate law and business correspondence simplified. Navigate regulatory frameworks with confidence.</p>
+        <p class="course-desc">Corporate law and business correspondence simplified. Navigate regulatory frameworks and statute interpretation with confidence.</p>
         <div class="course-footer">
           <span class="course-meta"><i class="fas fa-clock" style="color:var(--gold);margin-right:5px;"></i>6 Months</span>
           <a href="contact.html" class="btn-text">Enroll <i class="fas fa-arrow-right"></i></a>
@@ -182,7 +203,7 @@
         <div class="course-num">03</div>
         <div class="course-cat">CA Foundation</div>
         <h3 class="course-name">Paper 3 — Maths &amp; Statistics</h3>
-        <p class="course-desc">Business mathematics, logical reasoning and statistics — mastered with FA's step-by-step approach.</p>
+        <p class="course-desc">Business mathematics, logical reasoning and statistics — mastered with FA's step-by-step approach and model-specific practice sets.</p>
         <div class="course-footer">
           <span class="course-meta"><i class="fas fa-clock" style="color:var(--gold);margin-right:5px;"></i>6 Months</span>
           <a href="contact.html" class="btn-text">Enroll <i class="fas fa-arrow-right"></i></a>
@@ -193,40 +214,260 @@
         <div class="course-num">04</div>
         <div class="course-cat">CA Foundation</div>
         <h3 class="course-name">Paper 4 — Business Economics</h3>
-        <p class="course-desc">Business economics and commercial knowledge — from macro concepts to market dynamics, simplified for exam success.</p>
+        <p class="course-desc">Business economics and commercial knowledge — from macro concepts to market dynamics, simplified for exam success and real-world relevance.</p>
         <div class="course-footer">
           <span class="course-meta"><i class="fas fa-clock" style="color:var(--gold);margin-right:5px;"></i>6 Months</span>
           <a href="contact.html" class="btn-text">Enroll <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
 
-      <div class="course-card reveal" data-delay="2" data-cat="pro">
+      <div class="course-card reveal" data-delay="2" data-cat="ca">
         <div class="course-num">05</div>
-        <div class="course-cat">Professional</div>
-        <h3 class="course-name">Professional Development</h3>
-        <p class="course-desc">Advanced finance coaching for working professionals — structured for career growth and professional certification.</p>
+        <div class="course-cat">CA Foundation</div>
+        <h3 class="course-name">CA Foundation — All 4 Papers Combined</h3>
+        <p class="course-desc">FA's most comprehensive offering — all four CA Foundation papers in a single integrated batch. Covers the full syllabus with scheduled mock exams and performance reviews.</p>
         <div class="course-footer">
-          <span class="course-meta"><i class="fas fa-clock" style="color:var(--gold);margin-right:5px;"></i>Flexible</span>
+          <span class="course-meta"><i class="fas fa-clock" style="color:var(--gold);margin-right:5px;"></i>6 Months · Full Package</span>
           <a href="contact.html" class="btn-text">Enroll <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
 
-      <div class="course-card reveal" data-delay="3" data-cat="custom">
+      <!-- ── CA Inter ─────────────────────────────────── -->
+      <div class="course-card reveal" data-delay="3" data-cat="ca">
         <div class="course-num">06</div>
+        <div class="course-cat">CA Inter</div>
+        <h3 class="course-name">Paper 1 — Advanced Accounting</h3>
+        <p class="course-desc">Deep-dive into advanced accounting standards, partnership accounts, company accounts and financial reporting — built for CA Inter success.</p>
+        <div class="course-footer">
+          <span class="course-meta"><i class="fas fa-clock" style="color:var(--gold);margin-right:5px;"></i>8 Months</span>
+          <a href="contact.html" class="btn-text">Enroll <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="course-card reveal" data-delay="1" data-cat="ca">
+        <div class="course-num">07</div>
+        <div class="course-cat">CA Inter</div>
+        <h3 class="course-name">Paper 2 — Corporate &amp; Other Laws</h3>
+        <p class="course-desc">Companies Act, LLP Act, SEBI regulations and other key statutes — made systematic and exam-ready with FA's structured coverage.</p>
+        <div class="course-footer">
+          <span class="course-meta"><i class="fas fa-clock" style="color:var(--gold);margin-right:5px;"></i>8 Months</span>
+          <a href="contact.html" class="btn-text">Enroll <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="course-card reveal" data-delay="2" data-cat="ca">
+        <div class="course-num">08</div>
+        <div class="course-cat">CA Inter</div>
+        <h3 class="course-name">Paper 3 — Taxation</h3>
+        <p class="course-desc">Income Tax and GST comprehensive coverage — practical application, computation problems and case studies from FA's practicing CA faculty.</p>
+        <div class="course-footer">
+          <span class="course-meta"><i class="fas fa-clock" style="color:var(--gold);margin-right:5px;"></i>8 Months</span>
+          <a href="contact.html" class="btn-text">Enroll <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="course-card reveal" data-delay="3" data-cat="ca">
+        <div class="course-num">09</div>
+        <div class="course-cat">CA Inter</div>
+        <h3 class="course-name">Paper 4 — Cost &amp; Management Accounting</h3>
+        <p class="course-desc">Cost accounting techniques, standard costing, budgeting and management reporting — applied with real scenarios for exam and workplace relevance.</p>
+        <div class="course-footer">
+          <span class="course-meta"><i class="fas fa-clock" style="color:var(--gold);margin-right:5px;"></i>8 Months</span>
+          <a href="contact.html" class="btn-text">Enroll <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="course-card reveal" data-delay="1" data-cat="ca">
+        <div class="course-num">10</div>
+        <div class="course-cat">CA Inter</div>
+        <h3 class="course-name">Paper 5 — Auditing &amp; Ethics</h3>
+        <p class="course-desc">Auditing standards, risk-based approach, internal audit frameworks and professional ethics — structured to clear both theoretical and application-based questions.</p>
+        <div class="course-footer">
+          <span class="course-meta"><i class="fas fa-clock" style="color:var(--gold);margin-right:5px;"></i>8 Months</span>
+          <a href="contact.html" class="btn-text">Enroll <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="course-card reveal" data-delay="2" data-cat="ca">
+        <div class="course-num">11</div>
+        <div class="course-cat">CA Inter</div>
+        <h3 class="course-name">Paper 6 — Financial Statements Analysis</h3>
+        <p class="course-desc">Financial instrument valuation, ratio analysis, segment reporting and disclosure requirements — with heavy focus on ICAI's application-oriented question patterns.</p>
+        <div class="course-footer">
+          <span class="course-meta"><i class="fas fa-clock" style="color:var(--gold);margin-right:5px;"></i>8 Months</span>
+          <a href="contact.html" class="btn-text">Enroll <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="course-card reveal" data-delay="3" data-cat="ca">
+        <div class="course-num">12</div>
+        <div class="course-cat">CA Inter</div>
+        <h3 class="course-name">CA Inter — All Papers Combined</h3>
+        <p class="course-desc">Complete CA Inter preparation in a single integrated package — all 6 papers, scheduled mocks, revision sessions and performance analytics across the full 8-month programme.</p>
+        <div class="course-footer">
+          <span class="course-meta"><i class="fas fa-clock" style="color:var(--gold);margin-right:5px;"></i>8 Months · Full Package</span>
+          <a href="contact.html" class="btn-text">Enroll <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- ── Tally / Accounting Software ─────────────── -->
+      <div class="course-card reveal" data-delay="1" data-cat="pro">
+        <div class="course-num">13</div>
+        <div class="course-cat">Tally</div>
+        <h3 class="course-name">Tally Level 1 — Foundation</h3>
+        <p class="course-desc">Fundamentals of Tally — vouchers, ledgers, trial balance, basic reports and day-to-day accounting entry. Ideal for beginners and accounts assistants.</p>
+        <div class="course-footer">
+          <span class="course-meta"><i class="fas fa-clock" style="color:var(--gold);margin-right:5px;"></i>2 Months</span>
+          <a href="contact.html" class="btn-text">Enroll <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="course-card reveal" data-delay="2" data-cat="pro">
+        <div class="course-num">14</div>
+        <div class="course-cat">Tally</div>
+        <h3 class="course-name">Tally Level 2 — Advanced</h3>
+        <p class="course-desc">Advanced Tally features — GST returns, TDS management, payroll processing, inventory control, bank reconciliation and MIS reporting.</p>
+        <div class="course-footer">
+          <span class="course-meta"><i class="fas fa-clock" style="color:var(--gold);margin-right:5px;"></i>2 Months</span>
+          <a href="contact.html" class="btn-text">Enroll <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="course-card reveal" data-delay="3" data-cat="pro">
+        <div class="course-num">15</div>
+        <div class="course-cat">Tally</div>
+        <h3 class="course-name">Tally Prime Certification</h3>
+        <p class="course-desc">Complete certification in Tally Prime — the latest version of India's most-used accounting software. Includes a nationally recognised FA certificate upon completion.</p>
+        <div class="course-footer">
+          <span class="course-meta"><i class="fas fa-clock" style="color:var(--gold);margin-right:5px;"></i>3 Months</span>
+          <a href="contact.html" class="btn-text">Enroll <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- ── Finance Certificate Courses ─────────────── -->
+      <div class="course-card reveal" data-delay="1" data-cat="pro">
+        <div class="course-num">16</div>
+        <div class="course-cat">Certificate Course</div>
+        <h3 class="course-name">Financial Accounting Certificate</h3>
+        <p class="course-desc">A thorough foundation in financial accounting — double entry, financial statements, reconciliation and reporting — for non-CA professionals entering finance roles.</p>
+        <div class="course-footer">
+          <span class="course-meta"><i class="fas fa-clock" style="color:var(--gold);margin-right:5px;"></i>3 Months</span>
+          <a href="contact.html" class="btn-text">Enroll <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="course-card reveal" data-delay="2" data-cat="pro">
+        <div class="course-num">17</div>
+        <div class="course-cat">Certificate Course</div>
+        <h3 class="course-name">Management Accounting</h3>
+        <p class="course-desc">Budgeting, variance analysis, decision-making frameworks and performance measurement — practical management accounting for finance and operations professionals.</p>
+        <div class="course-footer">
+          <span class="course-meta"><i class="fas fa-clock" style="color:var(--gold);margin-right:5px;"></i>3 Months</span>
+          <a href="contact.html" class="btn-text">Enroll <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="course-card reveal" data-delay="3" data-cat="pro">
+        <div class="course-num">18</div>
+        <div class="course-cat">Certificate Course</div>
+        <h3 class="course-name">Banking &amp; Finance Fundamentals</h3>
+        <p class="course-desc">Core banking concepts, credit analysis, financial products and regulatory framework — ideal for students pursuing banking careers or preparing for bank exams.</p>
+        <div class="course-footer">
+          <span class="course-meta"><i class="fas fa-clock" style="color:var(--gold);margin-right:5px;"></i>2 Months</span>
+          <a href="contact.html" class="btn-text">Enroll <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- ── Tax & Compliance ─────────────────────────── -->
+      <div class="course-card reveal" data-delay="1" data-cat="pro">
+        <div class="course-num">19</div>
+        <div class="course-cat">Tax &amp; Compliance</div>
+        <h3 class="course-name">GST &amp; Indirect Tax Workshop</h3>
+        <p class="course-desc">GST registration, returns filing (GSTR-1, GSTR-3B), input tax credit, e-invoicing and audit compliance — hands-on practical workshops run by practicing CAs.</p>
+        <div class="course-footer">
+          <span class="course-meta"><i class="fas fa-clock" style="color:var(--gold);margin-right:5px;"></i>6 Weeks</span>
+          <a href="contact.html" class="btn-text">Enroll <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="course-card reveal" data-delay="2" data-cat="pro">
+        <div class="course-num">20</div>
+        <div class="course-cat">Tax &amp; Compliance</div>
+        <h3 class="course-name">Income Tax &amp; TDS</h3>
+        <p class="course-desc">ITR filing, TDS deductions, Form 26AS, advance tax and assessment procedures — practical training for accounts executives and self-employed professionals.</p>
+        <div class="course-footer">
+          <span class="course-meta"><i class="fas fa-clock" style="color:var(--gold);margin-right:5px;"></i>6 Weeks</span>
+          <a href="contact.html" class="btn-text">Enroll <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="course-card reveal" data-delay="3" data-cat="pro">
+        <div class="course-num">21</div>
+        <div class="course-cat">Tax &amp; Compliance</div>
+        <h3 class="course-name">Payroll Management</h3>
+        <p class="course-desc">Salary computation, PF/ESI contributions, payslip generation, Form 16, and payroll software — complete payroll management for HR and accounts teams.</p>
+        <div class="course-footer">
+          <span class="course-meta"><i class="fas fa-clock" style="color:var(--gold);margin-right:5px;"></i>4 Weeks</span>
+          <a href="contact.html" class="btn-text">Enroll <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- ── Professional Development ────────────────── -->
+      <div class="course-card reveal" data-delay="1" data-cat="pro">
+        <div class="course-num">22</div>
+        <div class="course-cat">Professional</div>
+        <h3 class="course-name">Professional Development Programme</h3>
+        <p class="course-desc">Advanced finance coaching for working professionals pursuing career advancement — structured mentoring, industry projects and certification across 6 months.</p>
+        <div class="course-footer">
+          <span class="course-meta"><i class="fas fa-clock" style="color:var(--gold);margin-right:5px;"></i>6 Months · Flexible</span>
+          <a href="contact.html" class="btn-text">Enroll <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="course-card reveal" data-delay="2" data-cat="pro">
+        <div class="course-num">23</div>
+        <div class="course-cat">Professional</div>
+        <h3 class="course-name">Corporate Finance Workshop</h3>
+        <p class="course-desc">Capital budgeting, valuation, M&amp;A basics, working capital management and financial modelling — designed for finance managers and MBA graduates.</p>
+        <div class="course-footer">
+          <span class="course-meta"><i class="fas fa-clock" style="color:var(--gold);margin-right:5px;"></i>2 Months</span>
+          <a href="contact.html" class="btn-text">Enroll <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="course-card reveal" data-delay="3" data-cat="pro">
+        <div class="course-num">24</div>
+        <div class="course-cat">Professional</div>
+        <h3 class="course-name">Fintech &amp; Digital Finance</h3>
+        <p class="course-desc">How technology is reshaping accounting, payments, lending and investment — critical knowledge for finance professionals entering a digitally transformed industry.</p>
+        <div class="course-footer">
+          <span class="course-meta"><i class="fas fa-clock" style="color:var(--gold);margin-right:5px;"></i>4 Weeks</span>
+          <a href="contact.html" class="btn-text">Enroll <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- ── Custom ───────────────────────────────────── -->
+      <div class="course-card reveal" data-delay="1" data-cat="custom">
+        <div class="course-num">25</div>
         <div class="course-cat">Custom</div>
         <h3 class="course-name">Custom Coaching Plans</h3>
-        <p class="course-desc">Fully personalised learning paths — built around your goals, schedule and knowledge level. 1-on-1 mentoring available.</p>
+        <p class="course-desc">Fully personalised learning paths — built around your goals, schedule and current knowledge level. 1-on-1 mentoring with a senior FA faculty member.</p>
         <div class="course-footer">
-          <span class="course-meta"><i class="fas fa-clock" style="color:var(--gold);margin-right:5px;"></i>Flexible</span>
+          <span class="course-meta"><i class="fas fa-clock" style="color:var(--gold);margin-right:5px;"></i>Flexible · On Request</span>
           <a href="contact.html" class="btn-text">Enquire <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
-    </div>
 
-    <div style="text-align:center;margin-top:56px;" class="reveal">
-      <a href="contact.html" class="btn-text" style="font-size:.9rem;">
-        View All 26 Programs — Contact Us &nbsp;<i class="fas fa-arrow-right"></i>
-      </a>
+      <div class="course-card reveal" data-delay="2" data-cat="custom">
+        <div class="course-num">26</div>
+        <div class="course-cat">Custom</div>
+        <h3 class="course-name">FA @ Office — Corporate Training</h3>
+        <p class="course-desc">Tailored finance training for corporate teams — Tally, GST, tax compliance, financial analysis or custom content. Delivered at your office or online.</p>
+        <div class="course-footer">
+          <span class="course-meta"><i class="fas fa-clock" style="color:var(--gold);margin-right:5px;"></i>Flexible · On Request</span>
+          <a href="fa-office.html" class="btn-text">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -360,6 +601,9 @@
 <a href="https://wa.me/918098301702" id="wa-float" target="_blank" rel="noopener" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
 <a href="#" id="back-to-top" title="Back to top"><i class="fas fa-arrow-up"></i></a>
 
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

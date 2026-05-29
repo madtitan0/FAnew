@@ -7,7 +7,7 @@
   <meta name="description" content="Shop FA's premium study materials — CA Foundation guides, question banks, study kits and flashcards crafted by our expert tutors." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,200..700;1,9..144,200..700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous"></noscript>
   <link rel="stylesheet" href="css/style.css" />
@@ -16,6 +16,7 @@
 
 <div id="loader">
   <div class="loader-text">FA</div>
+  <div class="loader-sub">Finance Academy — Hosur</div>
   <div class="loader-line"></div>
 </div>
 
@@ -26,10 +27,17 @@
   </a>
   <div class="nav-links">
     <a href="index.html" class="nav-link">Home</a>
-    <a href="about.html" class="nav-link">About</a>
-    <a href="programs.html" class="nav-link">Programs</a>
-    <a href="store.html" class="nav-link active">Store</a>
-    <a href="lounge.html" class="nav-link">Lounge</a>
+    <div class="nav-dropdown">
+      <span class="nav-dropdown-trigger" tabindex="0" role="button" aria-haspopup="true">FA <i class="fas fa-chevron-down" style="font-size:9px;opacity:.7;"></i></span>
+      <div class="nav-dropdown-menu" role="menu">
+        <a href="fa-schools.html" class="nav-dropdown-link" role="menuitem">FA @ Schools</a>
+        <a href="fa-colleges.html" class="nav-dropdown-link" role="menuitem">FA @ Colleges</a>
+        <a href="fa-office.html" class="nav-dropdown-link" role="menuitem">FA @ Office</a>
+      </div>
+    </div>
+    <a href="programs.html" class="nav-link">Courses / Programs</a>
+    <a href="why-fa.html" class="nav-link">Why FA?</a>
+    <a href="contact.html" class="nav-link">Contact Us</a>
   </div>
   <div class="nav-cta">
     <a href="contact.html" class="btn-nav">Enroll Now</a>
@@ -41,11 +49,23 @@
 
 <div id="nav-overlay">
   <a href="index.html" class="nav-overlay-link">Home</a>
-  <a href="about.html" class="nav-overlay-link">About</a>
-  <a href="programs.html" class="nav-overlay-link">Programs</a>
-  <a href="store.html" class="nav-overlay-link">Store</a>
-  <a href="lounge.html" class="nav-overlay-link">Lounge</a>
-  <a href="contact.html" class="nav-overlay-link">Contact</a>
+  <a href="fa-schools.html" class="nav-overlay-link">FA @ Schools</a>
+  <a href="fa-colleges.html" class="nav-overlay-link">FA @ Colleges</a>
+  <a href="fa-office.html" class="nav-overlay-link">FA @ Office</a>
+  <a href="programs.html" class="nav-overlay-link">Courses / Programs</a>
+  <a href="why-fa.html" class="nav-overlay-link">Why FA?</a>
+  <a href="contact.html" class="nav-overlay-link">Contact Us</a>
+</div>
+
+<!-- ── Exam Countdown Strip ── -->
+<div class="countdown-strip">
+  <div class="container">
+    <div class="countdown-inner">
+      <span class="countdown-label"><i class="fas fa-clock" style="margin-right:8px;color:var(--gold);"></i>CA Foundation Exam Countdown</span>
+      <span class="countdown-num"><strong id="exam-days" data-date="2026-11-15">—</strong> days to go</span>
+      <a href="contact.html" class="countdown-cta">Enroll Now <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
 </div>
 
 <!-- Page Hero -->
@@ -293,6 +313,9 @@
 <a href="https://wa.me/918098301702" id="wa-float" target="_blank" rel="noopener" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
 <a href="#" id="back-to-top" title="Back to top"><i class="fas fa-arrow-up"></i></a>
 
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

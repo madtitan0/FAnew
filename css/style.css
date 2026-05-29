@@ -1,10 +1,10 @@
 /* ============================================================
    FA – Finance Academy | Premium Redesign
-   Inter + DM Serif Display | CSS-only animations | No GSAP
+   Fraunces (variable) + Inter | GSAP + Lenis animations
    ============================================================ */
 
 /* ── Google Fonts ── */
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,200..700;1,9..144,200..700&family=Inter:wght@300;400;500;600;700&display=swap');
 
 /* ── Design Tokens ── */
 :root {
@@ -56,12 +56,13 @@ input, textarea, select { font-family: inherit; }
 
 /* ── Typography ── */
 h1, h2, h3 {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Fraunces', serif;
+  font-variation-settings: 'opsz' 72;
   font-weight: 400;
   line-height: 1.05;
 }
 h4 {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Fraunces', serif; font-variation-settings: 'opsz' 72;
   font-weight: 400;
   font-size: 1.1rem;
   line-height: 1.25;
@@ -108,7 +109,7 @@ p {
 #loader.done { opacity: 0; visibility: hidden; }
 
 .loader-text {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Fraunces', serif; font-variation-settings: 'opsz' 72;
   font-size: 1.4rem;
   color: var(--gold);
   letter-spacing: .12em;
@@ -172,7 +173,7 @@ p {
   text-decoration: none;
 }
 .nav-brand-mark {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Fraunces', serif; font-variation-settings: 'opsz' 72;
   font-style: italic;
   font-size: 1.6rem;
   color: var(--gold);
@@ -274,7 +275,7 @@ p {
 #nav-overlay.open { opacity: 1; pointer-events: all; }
 
 .nav-overlay-link {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Fraunces', serif; font-variation-settings: 'opsz' 72;
   font-size: clamp(2.2rem,7vw,4.5rem);
   color: var(--white);
   border-bottom: 1px solid var(--border);
@@ -434,7 +435,7 @@ p {
 }
 .hero-stat:last-child { border-bottom: none; }
 .hero-stat-num {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Fraunces', serif; font-variation-settings: 'opsz' 72;
   font-size: 2.8rem;
   color: var(--white);
   line-height: 1;
@@ -549,7 +550,7 @@ p {
 .stat-cell:last-child { border-right: none; }
 .stat-cell:hover { background: rgba(200,168,75,.03); }
 .stat-num {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Fraunces', serif; font-variation-settings: 'opsz' 72;
   font-size: clamp(2.4rem,4vw,3.6rem);
   color: var(--white);
   line-height: 1;
@@ -587,7 +588,7 @@ p {
 }
 .course-card:hover { background: var(--card); }
 .course-num {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Fraunces', serif; font-variation-settings: 'opsz' 72;
   font-size: 5rem;
   color: rgba(255,255,255,.04);
   position: absolute;
@@ -608,7 +609,7 @@ p {
   font-family: 'Inter', sans-serif;
 }
 .course-name {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Fraunces', serif; font-variation-settings: 'opsz' 72;
   font-size: 1.5rem;
   color: var(--white);
   margin-bottom: 12px;
@@ -662,7 +663,7 @@ p {
 .why-row:last-child { border-bottom: 1px solid var(--border); }
 .why-row:hover { background: rgba(255,255,255,.012); }
 .why-n {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Fraunces', serif; font-variation-settings: 'opsz' 72;
   font-size: 4.5rem;
   color: var(--dim);
   line-height: 1;
@@ -670,7 +671,7 @@ p {
 }
 .why-row:hover .why-n { color: rgba(200,168,75,.25); }
 .why-h {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Fraunces', serif; font-variation-settings: 'opsz' 72;
   font-size: clamp(1.4rem,2.5vw,2rem);
   color: var(--white);
   line-height: 1.25;
@@ -726,7 +727,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Fraunces', serif; font-variation-settings: 'opsz' 72;
   font-size: 1rem;
   color: var(--gold);
   margin-top: 40px;
@@ -767,7 +768,7 @@ p {
   font-family: 'Inter', sans-serif;
 }
 .tl-title {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Fraunces', serif; font-variation-settings: 'opsz' 72;
   font-size: 1.1rem;
   color: var(--white);
   margin-bottom: 8px;
@@ -778,7 +779,7 @@ p {
 .testimonial-block { max-width: 820px; margin: 0 auto; text-align: center; }
 .testimonial-quote {
   font-size: 5rem;
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Fraunces', serif; font-variation-settings: 'opsz' 72;
   color: var(--gold);
   opacity: .15;
   line-height: .5;
@@ -787,7 +788,7 @@ p {
   user-select: none;
 }
 .testimonial-text {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Fraunces', serif; font-variation-settings: 'opsz' 72;
   font-size: clamp(1.4rem,3vw,2.2rem);
   color: var(--white);
   line-height: 1.5;
@@ -809,7 +810,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Fraunces', serif; font-variation-settings: 'opsz' 72;
   font-size: 1.2rem;
   color: #06080f;
   font-weight: 400;
@@ -859,7 +860,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Fraunces', serif; font-variation-settings: 'opsz' 72;
   font-size: .9rem;
   color: #06080f;
   flex-shrink: 0;
@@ -899,7 +900,7 @@ p {
   font-family: 'Inter', sans-serif;
 }
 .blog-title {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Fraunces', serif; font-variation-settings: 'opsz' 72;
   font-size: 1.1rem;
   color: var(--white);
   margin-bottom: 8px;
@@ -934,7 +935,7 @@ p {
   pointer-events: none;
 }
 .cta-title {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Fraunces', serif; font-variation-settings: 'opsz' 72;
   font-size: clamp(2.2rem,5vw,4.5rem);
   color: #06080f;
   line-height: 1.05;
@@ -1000,7 +1001,7 @@ footer {
   margin-bottom: 36px;
 }
 .footer-brand-name {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Fraunces', serif; font-variation-settings: 'opsz' 72;
   font-size: 1.6rem;
   color: var(--white);
   margin-bottom: 16px;
@@ -1157,7 +1158,7 @@ footer {
   align-items: center;
   padding: 24px 0;
   text-align: left;
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Fraunces', serif; font-variation-settings: 'opsz' 72;
   font-size: 1.1rem;
   color: var(--white);
   transition: color .3s;
@@ -1233,7 +1234,7 @@ footer {
   flex-shrink: 0;
 }
 .fact-strong {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Fraunces', serif; font-variation-settings: 'opsz' 72;
   font-size: 1.1rem;
   color: var(--white);
   display: block;
@@ -1268,7 +1269,7 @@ footer {
 .milestone-card:hover::before { transform: scaleX(1); }
 .milestone-card:hover { background: var(--card); }
 .milestone-num {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Fraunces', serif; font-variation-settings: 'opsz' 72;
   font-size: clamp(2.8rem,5vw,4.5rem);
   color: var(--gold);
   line-height: 1;
@@ -1276,7 +1277,7 @@ footer {
   display: block;
 }
 .milestone-title {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Fraunces', serif; font-variation-settings: 'opsz' 72;
   font-size: 1.15rem;
   color: var(--white);
   margin-bottom: 12px;
@@ -1299,14 +1300,14 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Fraunces', serif; font-variation-settings: 'opsz' 72;
   font-size: 1.8rem;
   color: #06080f;
   margin: 0 auto 20px;
   border: 2px solid rgba(200,168,75,.3);
 }
 .advisor-name {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Fraunces', serif; font-variation-settings: 'opsz' 72;
   font-size: 1.2rem;
   color: var(--white);
   margin-bottom: 6px;
@@ -1337,7 +1338,7 @@ footer {
   background: var(--surface);
 }
 .tutor-initial {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Fraunces', serif; font-variation-settings: 'opsz' 72;
   font-size: 5rem;
   color: rgba(255,255,255,.12);
   user-select: none;
@@ -1356,7 +1357,7 @@ footer {
 .team-card:hover .team-card-overlay {
   background: linear-gradient(to top, rgba(8,12,28,.98) 0%, rgba(8,12,28,.88) 65%, rgba(8,12,28,.3) 100%);
 }
-.team-name { font-family: 'DM Serif Display', serif; font-size: 1.2rem; color: var(--white); margin-bottom: 4px; }
+.team-name { font-family: 'Fraunces', serif; font-variation-settings: 'opsz' 72; font-size: 1.2rem; color: var(--white); margin-bottom: 4px; }
 .team-role {
   font-size: .7rem;
   letter-spacing: .14em;
@@ -1404,13 +1405,13 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Fraunces', serif; font-variation-settings: 'opsz' 72;
   font-size: 1.4rem;
   color: #06080f;
   flex-shrink: 0;
   border: 2px solid rgba(200,168,75,.25);
 }
-.story-name { font-family: 'DM Serif Display', serif; font-size: 1.15rem; color: var(--white); margin-bottom: 5px; }
+.story-name { font-family: 'Fraunces', serif; font-variation-settings: 'opsz' 72; font-size: 1.15rem; color: var(--white); margin-bottom: 5px; }
 .story-badge {
   display: inline-block;
   font-size: .58rem;
@@ -1425,7 +1426,7 @@ footer {
   font-weight: 600;
 }
 .story-quote {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Fraunces', serif; font-variation-settings: 'opsz' 72;
   font-size: 1rem;
   font-style: italic;
   color: var(--white);
@@ -1470,7 +1471,7 @@ footer {
   transition: transform .4s var(--ease);
 }
 .mode-card:hover .mode-icon { transform: scale(1.15) rotate(-5deg); }
-.mode-name { font-family: 'DM Serif Display', serif; font-size: 1.1rem; color: var(--white); margin-bottom: 8px; }
+.mode-name { font-family: 'Fraunces', serif; font-variation-settings: 'opsz' 72; font-size: 1.1rem; color: var(--white); margin-bottom: 8px; }
 .mode-desc { font-size: .82rem; color: var(--muted); line-height: 1.65; margin: 0; font-weight: 300; }
 
 /* Product cards (store) */
@@ -1509,7 +1510,7 @@ footer {
 .product-badge.teal  { background: #0d9488; color: #f0fdfa; }
 .product-body { padding: 24px; }
 .product-name {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Fraunces', serif; font-variation-settings: 'opsz' 72;
   font-size: 1.15rem;
   color: var(--white);
   margin-bottom: 8px;
@@ -1526,7 +1527,7 @@ footer {
   padding-top: 16px;
 }
 .product-price {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Fraunces', serif; font-variation-settings: 'opsz' 72;
   font-size: 1.4rem;
   color: var(--gold);
   line-height: 1;
@@ -1561,15 +1562,15 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Fraunces', serif; font-variation-settings: 'opsz' 72;
   font-size: 1.1rem;
   color: #06080f;
   margin: 0 auto 14px;
   box-shadow: 0 4px 16px rgba(200,168,75,.25);
 }
-.wof-name { font-family: 'DM Serif Display', serif; font-size: 1rem; color: var(--white); margin-bottom: 4px; line-height: 1.2; }
+.wof-name { font-family: 'Fraunces', serif; font-variation-settings: 'opsz' 72; font-size: 1rem; color: var(--white); margin-bottom: 4px; line-height: 1.2; }
 .wof-program { font-size: .72rem; color: var(--muted); margin-bottom: 10px; line-height: 1.4; font-family: 'Inter', sans-serif; }
-.wof-score { font-family: 'DM Serif Display', serif; font-size: 1.05rem; color: var(--gold); }
+.wof-score { font-family: 'Fraunces', serif; font-variation-settings: 'opsz' 72; font-size: 1.05rem; color: var(--gold); }
 
 /* Lounge nav */
 .lounge-nav {
@@ -1827,4 +1828,268 @@ textarea.form-input { resize: vertical; min-height: 120px; }
   .team-grid { grid-template-columns: 1fr; }
   .team-card { aspect-ratio: 3/4; }
   .why-body { padding-left: 0; }
+}
+
+/* ════════════════════════════════════════════════════════
+   NEW COMPONENTS — added in redesign pass
+   ════════════════════════════════════════════════════════ */
+
+/* Disable CSS scroll-behavior so Lenis takes full control */
+html { scroll-behavior: auto !important; }
+
+/* ── Grain texture overlay ── */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: .018;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+}
+
+/* ── Loader subtitle ── */
+.loader-sub {
+  font-family: 'Inter', sans-serif;
+  font-size: .7rem;
+  font-weight: 500;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: -12px;
+}
+
+/* ── Exam Countdown Strip ── */
+.countdown-strip {
+  background: linear-gradient(90deg, rgba(200,168,75,.12), rgba(200,168,75,.04));
+  border-top: 1px solid rgba(200,168,75,.15);
+  border-bottom: 1px solid rgba(200,168,75,.15);
+  padding: 12px 0;
+  position: sticky;
+  top: 68px;
+  z-index: 90;
+  backdrop-filter: blur(12px);
+}
+.countdown-inner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.countdown-label {
+  font-size: .75rem;
+  font-weight: 500;
+  letter-spacing: .08em;
+  color: var(--muted);
+  text-transform: uppercase;
+  flex: 1;
+}
+.countdown-num {
+  font-size: .85rem;
+  color: var(--white);
+  font-weight: 600;
+}
+.countdown-num strong {
+  font-size: 1.1rem;
+  color: var(--gold);
+  font-family: 'Fraunces', serif;
+  font-variation-settings: 'opsz' 72;
+}
+.countdown-cta {
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid rgba(200,168,75,.35);
+  border-radius: 4px;
+  padding: 6px 14px;
+  transition: background .2s, border-color .2s;
+}
+.countdown-cta:hover {
+  background: rgba(200,168,75,.12);
+  border-color: var(--gold);
+}
+@media (max-width: 640px) {
+  .countdown-label { display: none; }
+  .countdown-inner { justify-content: space-between; }
+}
+
+/* ── Hero cursor orb ── */
+.hero-orb {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(200,168,75,.09) 0%, transparent 70%);
+  pointer-events: none;
+  left: calc(var(--mx, 50%) - 300px);
+  top: calc(var(--my, 50%) - 300px);
+  transition: left .14s ease-out, top .14s ease-out;
+  z-index: 0;
+}
+#hero { position: relative; overflow: hidden; }
+#hero > *:not(.hero-orb) { position: relative; z-index: 1; }
+
+/* ── Navbar dropdown ── */
+.nav-dropdown {
+  position: relative;
+}
+.nav-dropdown-trigger {
+  font-size: .8rem;
+  font-weight: 500;
+  letter-spacing: .04em;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 4px 2px;
+  transition: color .2s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  user-select: none;
+}
+.nav-dropdown-trigger:hover,
+.nav-dropdown.open .nav-dropdown-trigger {
+  color: var(--white);
+}
+.nav-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 8px;
+  min-width: 180px;
+  display: none;
+  flex-direction: column;
+  gap: 2px;
+  box-shadow: var(--shadow);
+}
+.nav-dropdown.open .nav-dropdown-menu { display: flex; }
+.nav-dropdown-link {
+  font-size: .8rem;
+  font-weight: 500;
+  color: var(--muted);
+  padding: 10px 14px;
+  border-radius: 6px;
+  transition: background .2s, color .2s;
+}
+.nav-dropdown-link:hover {
+  background: rgba(255,255,255,.05);
+  color: var(--white);
+}
+
+/* ── FA@ page layout (sidebar + content) ── */
+.fa-page-hero {
+  padding: 140px 0 80px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+.fa-page-hero .label { margin-bottom: 16px; }
+.fa-page-hero h1 {
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  color: var(--white);
+  margin-bottom: 20px;
+}
+.fa-page-hero p {
+  max-width: 560px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+.fa-page-body {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 0;
+  min-height: 60vh;
+}
+.fa-page-sidebar {
+  border-right: 1px solid var(--border);
+  padding: 48px 0;
+  position: sticky;
+  top: 68px;
+  height: fit-content;
+}
+.fa-sidebar-link {
+  display: block;
+  font-size: .82rem;
+  font-weight: 500;
+  letter-spacing: .04em;
+  color: var(--muted);
+  padding: 12px 32px;
+  border-left: 2px solid transparent;
+  transition: color .2s, border-color .2s, background .2s;
+}
+.fa-sidebar-link:hover,
+.fa-sidebar-link.active {
+  color: var(--white);
+  border-left-color: var(--gold);
+  background: rgba(200,168,75,.05);
+}
+.fa-page-content { padding: 64px 48px; }
+@media (max-width: 900px) {
+  .fa-page-body { grid-template-columns: 1fr; }
+  .fa-page-sidebar { display: none; }
+  .fa-page-content { padding: 40px 0; }
+}
+
+/* ── Hall of Fame / WoF page hero ── */
+.wof-hero {
+  padding: 140px 0 72px;
+  text-align: center;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+.wof-hero h1 {
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  color: var(--white);
+  margin-bottom: 20px;
+}
+.wof-filter-bar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 40px 0 48px;
+}
+
+/* ── Why FA page ── */
+.why-page-hero {
+  padding: 140px 0 80px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+.why-page-hero h1 {
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  color: var(--white);
+  margin-bottom: 20px;
+}
+.milestone-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 40px 32px;
+  text-align: center;
+  transition: border-color .3s, background .3s;
+}
+.milestone-card:hover {
+  border-color: rgba(200,168,75,.35);
+  background: rgba(200,168,75,.04);
+}
+.milestone-num {
+  font-family: 'Fraunces', serif;
+  font-variation-settings: 'opsz' 72;
+  font-size: 3rem;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.milestone-label {
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--muted);
 }

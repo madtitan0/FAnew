@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hall of Fame | FA Finance Academy Hosur</title>
+  <meta name="description" content="FA's Wall of Fame — celebrating our rank holders, AIR achievers, state toppers and distinction holders. 100+ winners since inception." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,200..700;1,9..144,200..700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous"></noscript>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ── Loader ── -->
+<div id="loader">
+  <div class="loader-text">FA</div>
+  <div class="loader-sub">Finance Academy — Hosur</div>
+  <div class="loader-line"></div>
+</div>
+
+<!-- ── Navbar ── -->
+<nav id="navbar">
+  <a href="index.html" class="nav-brand">
+    <span class="nav-brand-mark">FA</span>
+    <span class="nav-brand-text">Finance Academy<span>Hosur, Tamil Nadu</span></span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html" class="nav-link">Home</a>
+    <div class="nav-dropdown">
+      <span class="nav-dropdown-trigger" tabindex="0" role="button" aria-haspopup="true">FA <i class="fas fa-chevron-down" style="font-size:9px;opacity:.7;"></i></span>
+      <div class="nav-dropdown-menu" role="menu">
+        <a href="fa-schools.html" class="nav-dropdown-link" role="menuitem">FA @ Schools</a>
+        <a href="fa-colleges.html" class="nav-dropdown-link" role="menuitem">FA @ Colleges</a>
+        <a href="fa-office.html" class="nav-dropdown-link" role="menuitem">FA @ Office</a>
+      </div>
+    </div>
+    <a href="programs.html" class="nav-link">Courses / Programs</a>
+    <a href="why-fa.html" class="nav-link">Why FA?</a>
+    <a href="contact.html" class="nav-link">Contact Us</a>
+  </div>
+  <div class="nav-cta">
+    <a href="contact.html" class="btn-nav">Enroll Now</a>
+  </div>
+  <button class="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ── Mobile Overlay ── -->
+<div id="nav-overlay">
+  <a href="index.html" class="nav-overlay-link">Home</a>
+  <a href="fa-schools.html" class="nav-overlay-link">FA @ Schools</a>
+  <a href="fa-colleges.html" class="nav-overlay-link">FA @ Colleges</a>
+  <a href="fa-office.html" class="nav-overlay-link">FA @ Office</a>
+  <a href="programs.html" class="nav-overlay-link">Courses / Programs</a>
+  <a href="why-fa.html" class="nav-overlay-link">Why FA?</a>
+  <a href="contact.html" class="nav-overlay-link">Contact Us</a>
+</div>
+
+<!-- ── Exam Countdown Strip ── -->
+<div class="countdown-strip">
+  <div class="container">
+    <div class="countdown-inner">
+      <span class="countdown-label"><i class="fas fa-clock" style="margin-right:8px;color:var(--gold);"></i>CA Foundation Exam Countdown</span>
+      <span class="countdown-num"><strong id="exam-days" data-date="2026-11-15">—</strong> days to go</span>
+      <a href="contact.html" class="countdown-cta">Enroll Now <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- ── Page Hero ── -->
+<div class="wof-hero">
+  <div class="container">
+    <div class="label reveal" style="justify-content:center;margin-bottom:16px;">Hall of Fame</div>
+    <h1 class="reveal" data-delay="1">100+ Winners.<br><em style="color:var(--gold);">Built Right Here.</em></h1>
+    <p class="reveal" data-delay="2" style="max-width:520px;margin:0 auto;">Every name on this wall earned their place through hard work, discipline and the FA system. This is their story.</p>
+  </div>
+</div>
+
+<!-- ── Stats ── -->
+<div class="stats-band">
+  <div class="container">
+    <div class="stats-band-grid">
+      <div class="stat-cell reveal">
+        <span class="stat-num"><span data-count="100">0</span><span class="stat-suf">+</span></span>
+        <span class="stat-lbl">Rank Holders</span>
+      </div>
+      <div class="stat-cell reveal" data-delay="1">
+        <span class="stat-num"><span data-count="12">0</span><span class="stat-suf">+</span></span>
+        <span class="stat-lbl">AIR Top 100</span>
+      </div>
+      <div class="stat-cell reveal" data-delay="2">
+        <span class="stat-num"><span data-count="35">0</span><span class="stat-suf">+</span></span>
+        <span class="stat-lbl">State Toppers</span>
+      </div>
+      <div class="stat-cell reveal" data-delay="3">
+        <span class="stat-num"><span data-count="200">0</span><span class="stat-suf">+</span></span>
+        <span class="stat-lbl">Distinction Holders</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── Filter & Wall of Fame ── -->
+<section class="section bg-surface">
+  <div class="container">
+    <div class="section-hd reveal" style="text-align:center;">
+      <div class="label" style="justify-content:center;margin-bottom:16px;">Our Champions</div>
+      <h2 style="font-size:clamp(2rem,4vw,3rem);color:var(--white);">The Wall of Fame</h2>
+    </div>
+
+    <div class="wof-filter-bar reveal">
+      <button class="filter-btn active" data-filter="all">All Achievers</button>
+      <button class="filter-btn" data-filter="air">AIR Holders</button>
+      <button class="filter-btn" data-filter="state">State Toppers</button>
+      <button class="filter-btn" data-filter="distinction">Distinction</button>
+      <button class="filter-btn" data-filter="first">First Attempt</button>
+    </div>
+
+    <div class="wof-grid">
+      <div class="wof-card reveal" data-cat="air">
+        <div class="wof-rank">#1</div>
+        <div class="wof-initial">A</div>
+        <div class="wof-name">Aishwarya R.</div>
+        <div class="wof-score">AIR 1 — CA Foundation</div>
+        <div class="wof-batch">May 2023</div>
+      </div>
+      <div class="wof-card reveal" data-delay="1" data-cat="air">
+        <div class="wof-rank">#3</div>
+        <div class="wof-initial">K</div>
+        <div class="wof-name">Karthik S.</div>
+        <div class="wof-score">AIR 3 — CA Foundation</div>
+        <div class="wof-batch">Nov 2023</div>
+      </div>
+      <div class="wof-card reveal" data-delay="2" data-cat="state">
+        <div class="wof-rank">TN #1</div>
+        <div class="wof-initial">P</div>
+        <div class="wof-name">Priya M.</div>
+        <div class="wof-score">State Rank 1 — Tamil Nadu</div>
+        <div class="wof-batch">May 2024</div>
+      </div>
+      <div class="wof-card reveal" data-delay="3" data-cat="distinction">
+        <div class="wof-rank">★★★★★</div>
+        <div class="wof-initial">V</div>
+        <div class="wof-name">Vikram T.</div>
+        <div class="wof-score">Distinction — All 4 Papers</div>
+        <div class="wof-batch">CA Foundation 2024</div>
+      </div>
+      <div class="wof-card reveal" data-delay="1" data-cat="first">
+        <div class="wof-rank">1st Attempt</div>
+        <div class="wof-initial">S</div>
+        <div class="wof-name">Sasivarman N.</div>
+        <div class="wof-score">Cleared First Attempt</div>
+        <div class="wof-batch">CA Foundation 2024</div>
+      </div>
+      <div class="wof-card reveal" data-delay="2" data-cat="state">
+        <div class="wof-rank">TN #4</div>
+        <div class="wof-initial">D</div>
+        <div class="wof-name">Deepa K.</div>
+        <div class="wof-score">State Rank 4 — Tamil Nadu</div>
+        <div class="wof-batch">Nov 2024</div>
+      </div>
+      <div class="wof-card reveal" data-delay="3" data-cat="air">
+        <div class="wof-rank">#7</div>
+        <div class="wof-initial">R</div>
+        <div class="wof-name">Rahul V.</div>
+        <div class="wof-score">AIR 7 — CA Foundation</div>
+        <div class="wof-batch">May 2025</div>
+      </div>
+      <div class="wof-card reveal" data-cat="distinction">
+        <div class="wof-rank">★★★★★</div>
+        <div class="wof-initial">N</div>
+        <div class="wof-name">Nithish B.</div>
+        <div class="wof-score">Distinction — CA Inter</div>
+        <div class="wof-batch">CA Inter 2020</div>
+      </div>
+      <div class="wof-card reveal" data-delay="1" data-cat="first">
+        <div class="wof-rank">1st Attempt</div>
+        <div class="wof-initial">S</div>
+        <div class="wof-name">Subiksha A.</div>
+        <div class="wof-score">Cleared First Attempt</div>
+        <div class="wof-batch">Tally Level 1</div>
+      </div>
+      <div class="wof-card reveal" data-delay="2" data-cat="state">
+        <div class="wof-rank">TN #2</div>
+        <div class="wof-initial">M</div>
+        <div class="wof-name">Meena R.</div>
+        <div class="wof-score">State Rank 2 — Tamil Nadu</div>
+        <div class="wof-batch">May 2025</div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:64px;padding:40px;background:var(--card);border:1px solid var(--border);border-radius:16px;" class="reveal">
+      <div class="label" style="justify-content:center;margin-bottom:16px;">Your Name Next?</div>
+      <h3 style="font-size:clamp(1.6rem,3vw,2.2rem);color:var(--white);margin-bottom:16px;">Join the Wall of Fame</h3>
+      <p style="max-width:420px;margin:0 auto 28px;">Every student on this wall started exactly where you are. FA's system, faculty and support have been there at every step.</p>
+      <a href="contact.html" class="btn btn-gold">Enroll at FA <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-brand-name">Finance <span>Academy</span></div>
+        <p>FA – the Finance Academy is Hosur's most trusted institution for professional finance education. 26 programs, 9 modes, 600+ students, 100+ winners.</p>
+        <div class="f-socials">
+          <a href="#" class="f-social" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="f-social" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="f-social" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://wa.me/918098301702" class="f-social" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" class="f-social" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div>
+        <span class="footer-col-title">Navigation</span>
+        <div class="footer-links">
+          <a href="index.html" class="footer-link">Home</a>
+          <a href="about.html" class="footer-link">We Are FA</a>
+          <a href="programs.html" class="footer-link">Programs</a>
+          <a href="store.html" class="footer-link">FA Store</a>
+          <a href="lounge.html" class="footer-link">Lounge</a>
+          <a href="contact.html" class="footer-link">Contact</a>
+        </div>
+      </div>
+      <div>
+        <span class="footer-col-title">FA Outreach</span>
+        <div class="footer-links">
+          <a href="fa-schools.html" class="footer-link">FA @ Schools</a>
+          <a href="fa-colleges.html" class="footer-link">FA @ Colleges</a>
+          <a href="fa-office.html" class="footer-link">FA @ Office</a>
+          <a href="why-fa.html" class="footer-link">Why FA?</a>
+          <a href="hall-of-fame.html" class="footer-link">Hall of Fame</a>
+        </div>
+      </div>
+      <div>
+        <span class="footer-col-title">Contact</span>
+        <div class="footer-links">
+          <a href="tel:+918098301702" class="footer-link">+91 8098-301-702</a>
+          <a href="tel:+918098301703" class="footer-link">+91 8098-301-703</a>
+          <a href="mailto:supportfa@fahosur.com" class="footer-link">supportfa@fahosur.com</a>
+          <span class="footer-link" style="cursor:default;line-height:1.7;">S-2 Marutham Enclave, 2nd Floor<br>Gandhi Nagar, HUDCO<br>Hosur – 635109</span>
+          <span class="footer-link" style="cursor:default;">Mon – Sat &nbsp;9:00am – 6:00pm</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2025 FA – the Finance Academy. All rights reserved.</span>
+      <span>Hosur, Tamil Nadu &nbsp;·&nbsp; supportfa@fahosur.com</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/918098301702" id="wa-float" target="_blank" rel="noopener" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+<a href="#" id="back-to-top" title="Back to top"><i class="fas fa-arrow-up"></i></a>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
