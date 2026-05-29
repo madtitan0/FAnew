@@ -365,3 +365,38 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     });
   });
 });
+
+/* ── FA@ page sidebar scroll spy ── */
+const sidebar = document.querySelector('.fa-page-sidebar');
+if (sidebar) {
+  const links = [...sidebar.querySelectorAll('.fa-sidebar-link')];
+  const sections = links
+    .map(l => document.getElementById(l.getAttribute('href').replace('#', '')))
+    .filter(Boolean);
+
+  const setActive = id => {
+    links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + id));
+  };
+
+  /* IntersectionObserver: activate link when section enters viewport */
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) setActive(entry.target.id);
+    });
+  }, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
+
+  sections.forEach(s => obs.observe(s));
+
+  /* Click: update active immediately + smooth-scroll via Lenis */
+  links.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const id = link.getAttribute('href').replace('#', '');
+      setActive(id);
+      const target = document.getElementById(id);
+      if (target) {
+        lenis.scrollTo(target, { offset: -120, duration: 1.2 });
+      }
+    });
+  });
+}

@@ -4,13 +4,204 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hall of Fame | FA Finance Academy Hosur</title>
-  <meta name="description" content="FA's Wall of Fame — celebrating our rank holders, AIR achievers, state toppers and distinction holders. 100+ winners since inception." />
+  <meta name="description" content="FA's Hall of Fame — celebrating AIR holders, state toppers, distinction achievers and first-attempt clearers. 100+ winners since inception." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,200..700;1,9..144,200..700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous"></noscript>
   <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* ── Hall of Fame page-level extras ── */
+    .hof-hero {
+      padding: 140px 0 80px;
+      text-align: center;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+    .hof-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 70% at 50% 40%, rgba(200,168,75,.10), transparent 70%);
+      pointer-events: none;
+    }
+    /* Floating stars — pure CSS */
+    .hof-stars {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .hof-star {
+      position: absolute;
+      width: 4px; height: 4px;
+      border-radius: 50%;
+      background: var(--gold);
+      opacity: 0;
+      animation: starFloat 6s ease-in-out infinite;
+    }
+    .hof-star:nth-child(1)  { left:10%; top:70%; animation-delay:0s;    animation-duration:5.5s; }
+    .hof-star:nth-child(2)  { left:20%; top:50%; animation-delay:.8s;   animation-duration:7s; width:3px;height:3px; }
+    .hof-star:nth-child(3)  { left:35%; top:80%; animation-delay:1.6s;  animation-duration:6s; }
+    .hof-star:nth-child(4)  { left:55%; top:30%; animation-delay:.3s;   animation-duration:5s; }
+    .hof-star:nth-child(5)  { left:70%; top:65%; animation-delay:1.2s;  animation-duration:6.5s; }
+    .hof-star:nth-child(6)  { left:80%; top:45%; animation-delay:.5s;   animation-duration:7.5s; width:5px;height:5px; }
+    .hof-star:nth-child(7)  { left:88%; top:20%; animation-delay:2s;    animation-duration:5.5s; width:3px;height:3px; }
+    .hof-star:nth-child(8)  { left:5%;  top:25%; animation-delay:1.8s;  animation-duration:6s; }
+    .hof-star:nth-child(9)  { left:92%; top:75%; animation-delay:.6s;   animation-duration:7s; }
+    .hof-star:nth-child(10) { left:45%; top:15%; animation-delay:2.4s;  animation-duration:5s; width:3px;height:3px; }
+    @keyframes starFloat {
+      0%,100% { opacity: 0; transform: translateY(0) scale(1); }
+      30%      { opacity: .7; }
+      60%      { opacity: .4; transform: translateY(-40px) scale(1.2); }
+    }
+    .hof-hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: .68rem;
+      font-weight: 600;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+      font-family: 'Inter', sans-serif;
+      position: relative;
+    }
+    .hof-hero-eyebrow::before,
+    .hof-hero-eyebrow::after {
+      content: '';
+      display: block;
+      width: 28px; height: 1px;
+      background: var(--gold);
+    }
+    .hof-hero-title {
+      font-family: 'Fraunces', serif; font-variation-settings: 'opsz' 72;
+      font-size: clamp(3rem, 7vw, 6rem);
+      color: var(--white);
+      line-height: 1.02;
+      margin-bottom: 20px;
+      position: relative;
+    }
+    .hof-hero-sub {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 500px;
+      margin: 0 auto 40px;
+      line-height: 1.8;
+      font-weight: 300;
+    }
+    /* Stats band for HoF */
+    .hof-stats {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+    }
+    .hof-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+    }
+    .hof-stat-cell {
+      padding: 44px 32px;
+      border-right: 1px solid var(--border);
+      text-align: center;
+      position: relative;
+      transition: background .3s;
+    }
+    .hof-stat-cell:last-child { border-right: none; }
+    .hof-stat-cell:hover { background: var(--surface); }
+    .hof-stat-icon {
+      font-size: 1.4rem;
+      color: var(--gold);
+      margin-bottom: 14px;
+      display: block;
+      opacity: .8;
+    }
+    .hof-stat-num {
+      font-family: 'Fraunces', serif; font-variation-settings: 'opsz' 72;
+      font-size: clamp(2.4rem,4vw,3.6rem);
+      color: var(--white);
+      line-height: 1;
+      display: block;
+    }
+    .hof-stat-suf { color: var(--gold); }
+    .hof-stat-lbl {
+      font-size: .65rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 8px;
+      display: block;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+    }
+    /* Podium section header */
+    .hof-section-label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: .66rem;
+      font-weight: 600;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      justify-content: center;
+      margin-bottom: 14px;
+      font-family: 'Inter', sans-serif;
+    }
+    .hof-section-label::before,
+    .hof-section-label::after {
+      content: '';
+      display: block;
+      width: 24px; height: 1px;
+      background: var(--gold);
+    }
+    /* Filter bar override for this page */
+    .hof-filter-bar {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0 0 40px;
+    }
+    /* CTA banner */
+    .hof-cta {
+      background: linear-gradient(135deg, rgba(200,168,75,.1), rgba(200,168,75,.03));
+      border: 1px solid rgba(200,168,75,.22);
+      border-radius: 20px;
+      padding: 56px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hof-cta::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 240px; height: 240px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(200,168,75,.14), transparent 70%);
+      pointer-events: none;
+    }
+    .hof-cta-trophy {
+      font-size: 3rem;
+      color: var(--gold);
+      margin-bottom: 20px;
+      display: block;
+      position: relative;
+    }
+    @media (max-width: 768px) {
+      .hof-stats-grid { grid-template-columns: repeat(2,1fr); }
+      .hof-stat-cell:nth-child(2) { border-right: none; }
+      .hof-stat-cell { border-bottom: 1px solid var(--border); }
+      .hof-stat-cell:last-child { border-bottom: none; }
+    }
+    @media (max-width: 480px) {
+      .hof-stats-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
 </head>
 <body>
 
@@ -72,133 +263,258 @@
 </div>
 
 <!-- ── Page Hero ── -->
-<div class="wof-hero">
-  <div class="container">
-    <div class="label reveal" style="justify-content:center;margin-bottom:16px;">Hall of Fame</div>
-    <h1 class="reveal" data-delay="1">100+ Winners.<br><em style="color:var(--gold);">Built Right Here.</em></h1>
-    <p class="reveal" data-delay="2" style="max-width:520px;margin:0 auto;">Every name on this wall earned their place through hard work, discipline and the FA system. This is their story.</p>
+<div class="hof-hero">
+  <div class="hof-stars">
+    <span class="hof-star"></span><span class="hof-star"></span>
+    <span class="hof-star"></span><span class="hof-star"></span>
+    <span class="hof-star"></span><span class="hof-star"></span>
+    <span class="hof-star"></span><span class="hof-star"></span>
+    <span class="hof-star"></span><span class="hof-star"></span>
+  </div>
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="hof-hero-eyebrow reveal">Hall of Fame</div>
+    <h1 class="hof-hero-title reveal" data-delay="1">
+      100+ Winners.<br><em style="color:var(--gold);">Built Right Here.</em>
+    </h1>
+    <p class="hof-hero-sub reveal" data-delay="2">Every name on this wall earned their place through hard work, discipline and the FA system. This is their legacy.</p>
+    <div class="reveal" data-delay="3" style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+      <a href="contact.html" class="btn btn-gold">Join Their Ranks <i class="fas fa-arrow-right"></i></a>
+      <a href="programs.html" class="btn btn-ghost">View Programs</a>
+    </div>
   </div>
 </div>
 
-<!-- ── Stats ── -->
-<div class="stats-band">
+<!-- ── Stats Band ── -->
+<div class="hof-stats">
   <div class="container">
-    <div class="stats-band-grid">
-      <div class="stat-cell reveal">
-        <span class="stat-num"><span data-count="100">0</span><span class="stat-suf">+</span></span>
-        <span class="stat-lbl">Rank Holders</span>
+    <div class="hof-stats-grid">
+      <div class="hof-stat-cell reveal">
+        <i class="fas fa-trophy hof-stat-icon"></i>
+        <span class="hof-stat-num"><span data-count="100">0</span><span class="hof-stat-suf">+</span></span>
+        <span class="hof-stat-lbl">Rank Holders</span>
       </div>
-      <div class="stat-cell reveal" data-delay="1">
-        <span class="stat-num"><span data-count="12">0</span><span class="stat-suf">+</span></span>
-        <span class="stat-lbl">AIR Top 100</span>
+      <div class="hof-stat-cell reveal" data-delay="1">
+        <i class="fas fa-medal hof-stat-icon"></i>
+        <span class="hof-stat-num"><span data-count="12">0</span><span class="hof-stat-suf">+</span></span>
+        <span class="hof-stat-lbl">AIR Top 100</span>
       </div>
-      <div class="stat-cell reveal" data-delay="2">
-        <span class="stat-num"><span data-count="35">0</span><span class="stat-suf">+</span></span>
-        <span class="stat-lbl">State Toppers</span>
+      <div class="hof-stat-cell reveal" data-delay="2">
+        <i class="fas fa-map-marker-alt hof-stat-icon"></i>
+        <span class="hof-stat-num"><span data-count="35">0</span><span class="hof-stat-suf">+</span></span>
+        <span class="hof-stat-lbl">State Toppers</span>
       </div>
-      <div class="stat-cell reveal" data-delay="3">
-        <span class="stat-num"><span data-count="200">0</span><span class="stat-suf">+</span></span>
-        <span class="stat-lbl">Distinction Holders</span>
+      <div class="hof-stat-cell reveal" data-delay="3">
+        <i class="fas fa-star hof-stat-icon"></i>
+        <span class="hof-stat-num"><span data-count="200">0</span><span class="hof-stat-suf">+</span></span>
+        <span class="hof-stat-lbl">Distinction Holders</span>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ── Filter & Wall of Fame ── -->
+<!-- ── Top Achievers Podium ── -->
+<section class="section" style="background:#fff;border-bottom:1px solid var(--border);">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:48px;" class="reveal">
+      <div class="hof-section-label">Top Achievers</div>
+      <h2 style="font-size:clamp(2rem,4vw,3rem);color:var(--white);margin-bottom:12px;">FA's Finest</h2>
+      <p style="max-width:440px;margin:0 auto;">Our highest achievers — the students who set the standard for every batch that follows.</p>
+    </div>
+
+    <div class="hof-podium-wrap reveal" data-delay="1">
+      <div class="hof-podium">
+
+        <!-- #2 Silver -->
+        <div class="hof-podium-card silver">
+          <span class="pod-medal-emoji">🥈</span>
+          <div class="pod-avatar">K</div>
+          <div class="pod-rank">AIR #3</div>
+          <div class="pod-name">Karthik S.</div>
+          <div class="pod-score">CA Foundation</div>
+          <div class="pod-batch">Nov 2023</div>
+        </div>
+
+        <!-- #1 Gold — centre, elevated -->
+        <div class="hof-podium-card gold">
+          <i class="fas fa-trophy pod-trophy-icon"></i>
+          <div class="pod-avatar">A</div>
+          <div class="pod-rank">All India Rank #1</div>
+          <div class="pod-name">Aishwarya R.</div>
+          <div class="pod-score">CA Foundation</div>
+          <div class="pod-batch">May 2023</div>
+        </div>
+
+        <!-- #3 Bronze -->
+        <div class="hof-podium-card bronze">
+          <span class="pod-medal-emoji">🥉</span>
+          <div class="pod-avatar">P</div>
+          <div class="pod-rank">State Rank #1</div>
+          <div class="pod-name">Priya M.</div>
+          <div class="pod-score">Tamil Nadu Topper</div>
+          <div class="pod-batch">May 2024</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Champions Wall ── -->
 <section class="section bg-surface">
   <div class="container">
-    <div class="section-hd reveal" style="text-align:center;">
-      <div class="label" style="justify-content:center;margin-bottom:16px;">Our Champions</div>
-      <h2 style="font-size:clamp(2rem,4vw,3rem);color:var(--white);">The Wall of Fame</h2>
+
+    <div style="text-align:center;margin-bottom:40px;" class="reveal">
+      <div class="hof-section-label">The Wall of Champions</div>
+      <h2 style="font-size:clamp(2rem,4vw,3rem);color:var(--white);margin-bottom:12px;">Every Name. Every Win.</h2>
+      <p style="max-width:460px;margin:0 auto;">Filter by achievement type to find your inspiration.</p>
     </div>
 
-    <div class="wof-filter-bar reveal">
-      <button class="filter-btn active" data-filter="all">All Achievers</button>
+    <!-- Filter -->
+    <div class="hof-filter-bar reveal">
+      <button class="filter-btn active" data-filter="all">All Champions</button>
       <button class="filter-btn" data-filter="air">AIR Holders</button>
       <button class="filter-btn" data-filter="state">State Toppers</button>
       <button class="filter-btn" data-filter="distinction">Distinction</button>
       <button class="filter-btn" data-filter="first">First Attempt</button>
     </div>
 
-    <div class="wof-grid">
-      <div class="wof-card reveal" data-cat="air">
-        <div class="wof-rank">#1</div>
-        <div class="wof-initial">A</div>
-        <div class="wof-name">Aishwarya R.</div>
-        <div class="wof-score">AIR 1 — CA Foundation</div>
-        <div class="wof-batch">May 2023</div>
+    <!-- Grid -->
+    <div class="hof-grid">
+
+      <div class="hof-card reveal" data-cat="air">
+        <div class="hof-bg-rank">1</div>
+        <div class="hof-icon-wrap"><i class="fas fa-trophy"></i></div>
+        <div class="hof-avatar">A</div>
+        <div class="hof-name">Aishwarya R.</div>
+        <div class="hof-achievement">All India Rank 1</div>
+        <div class="hof-exam">CA Foundation · May 2023</div>
+        <span class="hof-badge air">AIR Holder</span>
       </div>
-      <div class="wof-card reveal" data-delay="1" data-cat="air">
-        <div class="wof-rank">#3</div>
-        <div class="wof-initial">K</div>
-        <div class="wof-name">Karthik S.</div>
-        <div class="wof-score">AIR 3 — CA Foundation</div>
-        <div class="wof-batch">Nov 2023</div>
+
+      <div class="hof-card reveal" data-delay="1" data-cat="air">
+        <div class="hof-bg-rank">3</div>
+        <div class="hof-icon-wrap"><i class="fas fa-trophy"></i></div>
+        <div class="hof-avatar">K</div>
+        <div class="hof-name">Karthik S.</div>
+        <div class="hof-achievement">All India Rank 3</div>
+        <div class="hof-exam">CA Foundation · Nov 2023</div>
+        <span class="hof-badge air">AIR Holder</span>
       </div>
-      <div class="wof-card reveal" data-delay="2" data-cat="state">
-        <div class="wof-rank">TN #1</div>
-        <div class="wof-initial">P</div>
-        <div class="wof-name">Priya M.</div>
-        <div class="wof-score">State Rank 1 — Tamil Nadu</div>
-        <div class="wof-batch">May 2024</div>
+
+      <div class="hof-card reveal" data-delay="2" data-cat="air">
+        <div class="hof-bg-rank">7</div>
+        <div class="hof-icon-wrap"><i class="fas fa-trophy"></i></div>
+        <div class="hof-avatar">R</div>
+        <div class="hof-name">Rahul V.</div>
+        <div class="hof-achievement">All India Rank 7</div>
+        <div class="hof-exam">CA Foundation · May 2025</div>
+        <span class="hof-badge air">AIR Holder</span>
       </div>
-      <div class="wof-card reveal" data-delay="3" data-cat="distinction">
-        <div class="wof-rank">★★★★★</div>
-        <div class="wof-initial">V</div>
-        <div class="wof-name">Vikram T.</div>
-        <div class="wof-score">Distinction — All 4 Papers</div>
-        <div class="wof-batch">CA Foundation 2024</div>
+
+      <div class="hof-card reveal" data-delay="3" data-cat="state">
+        <div class="hof-bg-rank">1</div>
+        <div class="hof-icon-wrap"><i class="fas fa-map-marker-alt"></i></div>
+        <div class="hof-avatar">P</div>
+        <div class="hof-name">Priya M.</div>
+        <div class="hof-achievement">Tamil Nadu Rank 1</div>
+        <div class="hof-exam">CA Foundation · May 2024</div>
+        <span class="hof-badge state">State Topper</span>
       </div>
-      <div class="wof-card reveal" data-delay="1" data-cat="first">
-        <div class="wof-rank">1st Attempt</div>
-        <div class="wof-initial">S</div>
-        <div class="wof-name">Sasivarman N.</div>
-        <div class="wof-score">Cleared First Attempt</div>
-        <div class="wof-batch">CA Foundation 2024</div>
+
+      <div class="hof-card reveal" data-cat="state">
+        <div class="hof-bg-rank">2</div>
+        <div class="hof-icon-wrap"><i class="fas fa-map-marker-alt"></i></div>
+        <div class="hof-avatar">M</div>
+        <div class="hof-name">Meena R.</div>
+        <div class="hof-achievement">Tamil Nadu Rank 2</div>
+        <div class="hof-exam">CA Foundation · May 2025</div>
+        <span class="hof-badge state">State Topper</span>
       </div>
-      <div class="wof-card reveal" data-delay="2" data-cat="state">
-        <div class="wof-rank">TN #4</div>
-        <div class="wof-initial">D</div>
-        <div class="wof-name">Deepa K.</div>
-        <div class="wof-score">State Rank 4 — Tamil Nadu</div>
-        <div class="wof-batch">Nov 2024</div>
+
+      <div class="hof-card reveal" data-delay="1" data-cat="state">
+        <div class="hof-bg-rank">4</div>
+        <div class="hof-icon-wrap"><i class="fas fa-map-marker-alt"></i></div>
+        <div class="hof-avatar">D</div>
+        <div class="hof-name">Deepa K.</div>
+        <div class="hof-achievement">Tamil Nadu Rank 4</div>
+        <div class="hof-exam">CA Foundation · Nov 2024</div>
+        <span class="hof-badge state">State Topper</span>
       </div>
-      <div class="wof-card reveal" data-delay="3" data-cat="air">
-        <div class="wof-rank">#7</div>
-        <div class="wof-initial">R</div>
-        <div class="wof-name">Rahul V.</div>
-        <div class="wof-score">AIR 7 — CA Foundation</div>
-        <div class="wof-batch">May 2025</div>
+
+      <div class="hof-card reveal" data-delay="2" data-cat="distinction">
+        <div class="hof-bg-rank">★</div>
+        <div class="hof-icon-wrap"><i class="fas fa-star"></i></div>
+        <div class="hof-avatar">V</div>
+        <div class="hof-name">Vikram T.</div>
+        <div class="hof-achievement">Distinction — All 4 Papers</div>
+        <div class="hof-exam">CA Foundation · 2024</div>
+        <span class="hof-badge distinction">Distinction</span>
       </div>
-      <div class="wof-card reveal" data-cat="distinction">
-        <div class="wof-rank">★★★★★</div>
-        <div class="wof-initial">N</div>
-        <div class="wof-name">Nithish B.</div>
-        <div class="wof-score">Distinction — CA Inter</div>
-        <div class="wof-batch">CA Inter 2020</div>
+
+      <div class="hof-card reveal" data-delay="3" data-cat="distinction">
+        <div class="hof-bg-rank">★</div>
+        <div class="hof-icon-wrap"><i class="fas fa-star"></i></div>
+        <div class="hof-avatar">N</div>
+        <div class="hof-name">Nithish B.</div>
+        <div class="hof-achievement">Distinction — CA Inter</div>
+        <div class="hof-exam">CA Intermediate · 2020</div>
+        <span class="hof-badge distinction">Distinction</span>
       </div>
-      <div class="wof-card reveal" data-delay="1" data-cat="first">
-        <div class="wof-rank">1st Attempt</div>
-        <div class="wof-initial">S</div>
-        <div class="wof-name">Subiksha A.</div>
-        <div class="wof-score">Cleared First Attempt</div>
-        <div class="wof-batch">Tally Level 1</div>
+
+      <div class="hof-card reveal" data-cat="first">
+        <div class="hof-bg-rank">1</div>
+        <div class="hof-icon-wrap"><i class="fas fa-bolt"></i></div>
+        <div class="hof-avatar">S</div>
+        <div class="hof-name">Sasivarman N.</div>
+        <div class="hof-achievement">Cleared First Attempt</div>
+        <div class="hof-exam">CA Foundation · 2024</div>
+        <span class="hof-badge first">First Attempt</span>
       </div>
-      <div class="wof-card reveal" data-delay="2" data-cat="state">
-        <div class="wof-rank">TN #2</div>
-        <div class="wof-initial">M</div>
-        <div class="wof-name">Meena R.</div>
-        <div class="wof-score">State Rank 2 — Tamil Nadu</div>
-        <div class="wof-batch">May 2025</div>
+
+      <div class="hof-card reveal" data-delay="1" data-cat="first">
+        <div class="hof-bg-rank">1</div>
+        <div class="hof-icon-wrap"><i class="fas fa-bolt"></i></div>
+        <div class="hof-avatar">S</div>
+        <div class="hof-name">Subiksha A.</div>
+        <div class="hof-achievement">Cleared First Attempt</div>
+        <div class="hof-exam">Tally Level 1</div>
+        <span class="hof-badge first">First Attempt</span>
+      </div>
+
+      <div class="hof-card reveal" data-delay="2" data-cat="air">
+        <div class="hof-bg-rank">15</div>
+        <div class="hof-icon-wrap"><i class="fas fa-trophy"></i></div>
+        <div class="hof-avatar">L</div>
+        <div class="hof-name">Lavanya S.</div>
+        <div class="hof-achievement">All India Rank 15</div>
+        <div class="hof-exam">CA Foundation · May 2024</div>
+        <span class="hof-badge air">AIR Holder</span>
+      </div>
+
+      <div class="hof-card reveal" data-delay="3" data-cat="distinction">
+        <div class="hof-bg-rank">★</div>
+        <div class="hof-icon-wrap"><i class="fas fa-star"></i></div>
+        <div class="hof-avatar">A</div>
+        <div class="hof-name">Ananya P.</div>
+        <div class="hof-achievement">Distinction — 3 Papers</div>
+        <div class="hof-exam">CA Foundation · Nov 2023</div>
+        <span class="hof-badge distinction">Distinction</span>
+      </div>
+
+    </div><!-- /hof-grid -->
+
+    <!-- ── CTA ── -->
+    <div class="hof-cta reveal" style="margin-top:72px;">
+      <span class="hof-cta-trophy"><i class="fas fa-trophy"></i></span>
+      <div class="hof-section-label">Your Name Next?</div>
+      <h3 style="font-size:clamp(1.8rem,3.5vw,2.6rem);color:var(--white);margin-bottom:16px;font-family:'Fraunces',serif;font-variation-settings:'opsz' 72;">Join the Wall of Fame</h3>
+      <p style="max-width:440px;margin:0 auto 32px;color:var(--muted);font-weight:300;">Every student on this wall started exactly where you are right now. FA's system, faculty and support were there at every step — and they will be for you too.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+        <a href="contact.html" class="btn btn-gold">Enroll at FA <i class="fas fa-arrow-right"></i></a>
+        <a href="why-fa.html" class="btn btn-ghost">Why FA?</a>
       </div>
     </div>
 
-    <div style="text-align:center;margin-top:64px;padding:40px;background:var(--card);border:1px solid var(--border);border-radius:16px;" class="reveal">
-      <div class="label" style="justify-content:center;margin-bottom:16px;">Your Name Next?</div>
-      <h3 style="font-size:clamp(1.6rem,3vw,2.2rem);color:var(--white);margin-bottom:16px;">Join the Wall of Fame</h3>
-      <p style="max-width:420px;margin:0 auto 28px;">Every student on this wall started exactly where you are. FA's system, faculty and support have been there at every step.</p>
-      <a href="contact.html" class="btn btn-gold">Enroll at FA <i class="fas fa-arrow-right"></i></a>
-    </div>
   </div>
 </section>
 
