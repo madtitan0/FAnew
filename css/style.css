@@ -2098,10 +2098,12 @@ body::after {
    LIGHT THEME SPECIFIC OVERRIDES
    ════════════════════════════════════════════════════════ */
 
-/* Loader keeps deep navy for dramatic entrance */
-#loader { background: #1c2543; }
-#loader .loader-sub { color: rgba(240,242,250,.5); }
-#loader .loader-line { background: rgba(240,242,250,.12); }
+/* Loader — white/gold to match light theme */
+#loader { background: #f8f9ff; }
+#loader .loader-text { color: var(--gold); font-size: 2rem; letter-spacing: .18em; }
+#loader .loader-sub { color: var(--muted); }
+#loader .loader-line { background: rgba(26,36,86,.1); }
+#loader .loader-line::after { background: linear-gradient(90deg, var(--gold), var(--gold2)); }
 
 /* Navbar scrolled → frosted glass on white */
 #navbar.scrolled {
@@ -2390,3 +2392,201 @@ select.form-input option { background: #fff; color: var(--white); }
 
 /* Stats-band alternating section on light */
 .stats-band { border-top: 1px solid var(--border); }
+
+/* ════════════════════════════════════════════════════════
+   PREMIUM VISUAL LAYER — high-end feel
+   ════════════════════════════════════════════════════════ */
+
+/* Gold shimmer bar pinned to top of viewport */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold) 0%, var(--gold2) 40%, var(--gold) 60%, var(--gold2) 100%);
+  background-size: 300% 100%;
+  animation: shimmerBar 4s linear infinite;
+  z-index: 99999;
+  pointer-events: none;
+}
+@keyframes shimmerBar {
+  0%   { background-position: 0% 0; }
+  100% { background-position: 300% 0; }
+}
+
+/* Hero panel glassmorphism */
+.hero-panel {
+  background: rgba(255,255,255,.78) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  border: 1px solid rgba(200,168,75,.2) !important;
+  box-shadow: 0 20px 60px rgba(26,36,86,.12), inset 0 1px 0 rgba(255,255,255,.6) !important;
+}
+
+/* Gold glow on course card hover */
+.course-card:hover {
+  box-shadow: 0 12px 40px rgba(200,168,75,.12);
+  border-left-color: var(--gold) !important;
+}
+
+/* Gold shimmer on enroll button */
+.btn-gold {
+  position: relative;
+  overflow: hidden;
+}
+.btn-gold::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.25), transparent);
+  transform: skewX(-20deg);
+  transition: left .6s ease;
+  pointer-events: none;
+}
+.btn-gold:hover::after { left: 140%; }
+
+/* Section heading gold rule */
+.section-hd .label::before { flex-shrink: 0; }
+
+/* Nav brand mark — circle treatment */
+.nav-brand-mark {
+  width: 38px; height: 38px;
+  background: linear-gradient(135deg, var(--gold), var(--gold2));
+  border-radius: 50%;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem !important;
+  color: #fff !important;
+  font-style: normal;
+  flex-shrink: 0;
+  box-shadow: 0 4px 16px rgba(200,168,75,.35);
+}
+
+/* Stat cell top accent on hover */
+.stat-cell:hover::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--gold);
+  border-radius: 0 0 2px 2px;
+}
+.stat-cell { position: relative; }
+
+/* Timeline card glow hover */
+.tl-card:hover {
+  box-shadow: 0 12px 40px rgba(200,168,75,.10) !important;
+}
+
+/* Mode card icon lift */
+.mode-card { transition: transform .35s var(--ease), box-shadow .35s; }
+.mode-card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(26,36,86,.08); }
+
+/* Better btn-ghost */
+.btn-ghost {
+  backdrop-filter: blur(8px);
+}
+
+/* Sections: subtle dot-grid pattern on light bg */
+.section:not(.bg-surface):not(.bg-dark) {
+  background-image: radial-gradient(rgba(26,36,86,.04) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Map section */
+.map-section-wrap { position: relative; overflow: hidden; }
+.map-address-bar {
+  background: #1c2543;
+  padding: 18px 0;
+}
+.map-address-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.map-address-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  color: #f0f2fa;
+}
+.map-address-item i {
+  color: var(--gold);
+  font-size: 1.2rem;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+.map-address-item strong {
+  display: block;
+  font-size: .88rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+  color: #f0f2fa;
+}
+.map-address-item span { font-size: .8rem; color: rgba(240,242,250,.65); line-height: 1.5; }
+.map-iframe {
+  display: block;
+  width: 100%;
+  height: 560px;
+  border: none;
+}
+@media (max-width: 768px) { .map-iframe { height: 380px; } }
+
+/* HoF roster */
+.hof-roster-section {
+  padding: 72px 0;
+  background: #fff;
+  border-top: 1px solid var(--border);
+}
+.hof-roster-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.hof-roster-item {
+  background: var(--card);
+  padding: 14px 18px;
+  transition: background .2s;
+}
+.hof-roster-item:hover { background: var(--surface); }
+.hof-roster-name {
+  font-weight: 600;
+  color: var(--white);
+  font-size: .88rem;
+  margin-bottom: 3px;
+  font-family: 'Inter', sans-serif;
+}
+.hof-roster-meta {
+  font-size: .7rem;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-wrap: wrap;
+  font-family: 'Inter', sans-serif;
+}
+.hof-roster-tag {
+  font-size: .52rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 40px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.hof-roster-tag.air   { background: rgba(200,168,75,.12); color: #8a6210; border: 1px solid rgba(200,168,75,.25); }
+.hof-roster-tag.dist  { background: rgba(124,58,237,.07); color: #6d28d9; border: 1px solid rgba(124,58,237,.2); }
+.hof-roster-tag.first { background: rgba(22,163,74,.07);  color: #15803d; border: 1px solid rgba(22,163,74,.2); }
+.hof-roster-tag.state { background: rgba(37,99,235,.07);  color: #1d4ed8; border: 1px solid rgba(37,99,235,.2); }
+.hof-roster-tag.pass  { background: rgba(26,36,86,.06);   color: var(--muted); border: 1px solid var(--border); }
+
+@media (max-width: 768px) { .hof-roster-grid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 480px) { .hof-roster-grid { grid-template-columns: 1fr; } }
